@@ -1,0 +1,43 @@
+export declare class GpExitIntent {
+  SETTINGS: {
+    ESCAPE_KEY_CODE: number;
+    COOKIE_NAME: string;
+    URL_TO_SEND: string;
+    UNIT_TO_SEND: string;
+    TAG_TO_SEND: string;
+    MIN_MOUSE_DISTANCE_FROM_TOP: number;
+    MOBILE_TRIGGER_TIMEOUT: number;
+  };
+  private element;
+  private submitArrow;
+  private submitCta;
+  caption: string;
+  description: string;
+  buttonLabel: string;
+  imageSrcMobile: string;
+  imageSrcDesktop: string;
+  downloadDocSrc: string;
+  downloadDocName: string;
+  checkboxLabel: string;
+  open: boolean;
+  email: string;
+  checkbox: boolean;
+  hasEmailError: boolean;
+  hasCheckboxError: boolean;
+  isMobile: boolean;
+  connectedCallback(): void;
+  componentDidRender(): void;
+  handleKeydown(e: any): void;
+  handleMouseout(e: any): void;
+  getSubmitCtaDisabled(): boolean;
+  getEmailPlaceholder(): "E-mail" | "Insira seu e-mail";
+  handleExitIntent(e: any): void;
+  handleDownload(): void;
+  updateSubmitStyles(): void;
+  handleEmailChange(e: any): void;
+  handleCheckboxChange(e: any): void;
+  handleSubmitClick(e: any): void;
+  handleSubmit(e: any): void;
+  getImageSrc(): string;
+  render(): any;
+}

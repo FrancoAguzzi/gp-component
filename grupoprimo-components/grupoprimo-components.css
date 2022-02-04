@@ -1,0 +1,37 @@
+/* Fonts Definition */
+@font-face {
+  font-family: 'proxima-it';
+  src: url(./assets/fonts/ProximaNova-RegularIt.ttf), url(./assets/fonts/ProximaNova-RegularIt.eot),
+    url(./assets/fonts/ProximaNova-RegularIt.woff), url(./assets/fonts/ProximaNova-RegularIt.woff2),
+    url(./assets/fonts/ProximaNova-RegularIt.svg);
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'proxima-bd';
+  src: url(./assets/fonts/ProximaNova-Bold.ttf), url(./assets/fonts/ProximaNova-Bold.eot), url(./assets/fonts/ProximaNova-Bold.woff),
+    url(./assets/fonts/ProximaNova-Bold.woff2), url(./assets/fonts/ProximaNova-Bold.svg);
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'proxima-lt';
+  src: url(./assets/fonts/ProximaNova-Light.eot), url(./assets/fonts/ProximaNova-Light.eot), url(./assets/fonts/ProximaNova-Light.woff),
+    url(./assets/fonts/ProximaNova-Light.woff2), url(./assets/fonts/ProximaNova-Light.svg);
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+/* Global variables */
+:root {
+  --white: #ffffff;
+  --error: #cf6679;
+  --spirit-stone: #00e7f9;
+  --grey: #e1e5e5;
+  --dark-850: #101113;
+  --dark-700: #202227;
+  --dark: #000;
+}
