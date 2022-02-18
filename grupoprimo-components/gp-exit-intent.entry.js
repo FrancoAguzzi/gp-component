@@ -57,7 +57,6 @@ let GpExitIntent = class {
   connectedCallback() {
     this.isMobile = window.matchMedia('(max-width: 767px)').matches;
     this.isTablet = window.matchMedia('(min-width: 768px) and (max-width: 1439px)').matches;
-    window.alert(this.campaignName);
     window.addEventListener('leadsCaptureSubmitSuccess', () => {
       this.handleDownload();
       this.open = false;
