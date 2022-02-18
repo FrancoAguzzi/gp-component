@@ -1,7 +1,6 @@
 export declare class GpExitIntent {
   SETTINGS: {
     ESCAPE_KEY_CODE: number;
-    COOKIE_NAME: string;
     URL_TO_SEND: string;
     UNIT_TO_SEND: string;
     TAG_TO_SEND: string;
@@ -10,21 +9,23 @@ export declare class GpExitIntent {
   };
   private element;
   private submitArrow;
-  private submitCta;
   caption: string;
   description: string;
   buttonLabel: string;
   imageSrcMobile: string;
+  imageSrcTablet: string;
   imageSrcDesktop: string;
   downloadDocSrc: string;
   downloadDocName: string;
   checkboxLabel: string;
+  campaignName: string;
   open: boolean;
   email: string;
   checkbox: boolean;
   hasEmailError: boolean;
   hasCheckboxError: boolean;
   isMobile: boolean;
+  isTablet: boolean;
   connectedCallback(): void;
   componentDidRender(): void;
   handleKeydown(e: any): void;
@@ -36,6 +37,7 @@ export declare class GpExitIntent {
   updateSubmitStyles(): void;
   handleEmailChange(e: any): void;
   handleCheckboxChange(e: any): void;
+  handleCloseModal(e: any, period: any): void;
   handleSubmitClick(e: any): void;
   handleSubmit(e: any): void;
   getImageSrc(): string;

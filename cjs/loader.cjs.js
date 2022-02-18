@@ -30,7 +30,7 @@ const defineCustomElements = (win, options) => {
   if (typeof window === 'undefined') return Promise.resolve();
   return patchEsm().then(() => {
   appGlobals.globalScripts();
-  return index.bootstrapLazy([["gp-exit-intent.cjs",[[1,"gp-exit-intent",{"caption":[1],"description":[1],"buttonLabel":[1,"button-label"],"imageSrcMobile":[1,"image-src-mobile"],"imageSrcDesktop":[1,"image-src-desktop"],"downloadDocSrc":[1,"download-doc-src"],"downloadDocName":[1,"download-doc-name"],"checkboxLabel":[1,"checkbox-label"],"open":[32],"email":[32],"checkbox":[32],"hasEmailError":[32],"hasCheckboxError":[32],"isMobile":[32]},[[4,"keydown","handleKeydown"],[5,"mouseout","handleMouseout"]]]]]], options);
+  return index.bootstrapLazy([["gp-exit-intent.cjs",[[1,"gp-exit-intent",{"caption":[1],"description":[1],"buttonLabel":[1,"button-label"],"imageSrcMobile":[1,"image-src-mobile"],"imageSrcTablet":[1,"image-src-tablet"],"imageSrcDesktop":[1,"image-src-desktop"],"downloadDocSrc":[1,"download-doc-src"],"downloadDocName":[1,"download-doc-name"],"checkboxLabel":[1,"checkbox-label"],"campaignName":[1,"campaign-name"],"open":[32],"email":[32],"checkbox":[32],"hasEmailError":[32],"hasCheckboxError":[32],"isMobile":[32],"isTablet":[32]},[[4,"keydown","handleKeydown"],[5,"mouseout","handleMouseout"]]]]]], options);
   });
 };
 

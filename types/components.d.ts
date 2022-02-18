@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "./stencil-public-runtime";
 export namespace Components {
     interface GpExitIntent {
         "buttonLabel": string;
+        "campaignName": string;
         "caption": string;
         "checkboxLabel": string;
         "description": string;
@@ -15,6 +16,7 @@ export namespace Components {
         "downloadDocSrc": string;
         "imageSrcDesktop": string;
         "imageSrcMobile": string;
+        "imageSrcTablet": string;
     }
 }
 declare global {
@@ -31,6 +33,7 @@ declare global {
 declare namespace LocalJSX {
     interface GpExitIntent {
         "buttonLabel"?: string;
+        "campaignName"?: string;
         "caption"?: string;
         "checkboxLabel"?: string;
         "description"?: string;
@@ -38,6 +41,7 @@ declare namespace LocalJSX {
         "downloadDocSrc"?: string;
         "imageSrcDesktop"?: string;
         "imageSrcMobile"?: string;
+        "imageSrcTablet"?: string;
     }
     interface IntrinsicElements {
         "gp-exit-intent": GpExitIntent;

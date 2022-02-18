@@ -104,9 +104,14 @@ input[type='checkbox']:focus + .checkbox__check {
 
 .main-button--submit {
   display: none;
+  opacity: 1;
+  background-color: var(--spirit-stone);
+  color: var(--dark);
+}
+
+.main-button--submit--disabled {
   background-color: var(--dark-700);
   color: var(--grey);
-  opacity: 1;
 }
 
 .close-button {
@@ -117,11 +122,20 @@ input[type='checkbox']:focus + .checkbox__check {
 .close-button__text {
   color: var(--white);
   opacity: 1;
+  margin: 9px 0 24px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.close-button__text--forever {
+  font-size: 0.75rem;
+  font-weight: 400;
   margin: 0;
+  padding: 0;
 }
 
 .exit-intent-popup {
-  z-index: 3;
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -129,7 +143,7 @@ input[type='checkbox']:focus + .checkbox__check {
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   visibility: hidden;
   transform: translateY(60%) scale(0);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -142,23 +156,21 @@ input[type='checkbox']:focus + .checkbox__check {
 
 .exit-intent-inner {
   min-height: 470px;
-  max-height: 660px;
-  width: 262px;
+  width: 280px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--dark-850);
+  background: var(--dark);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   box-shadow: 3px 5px 10px #304445;
+  overflow: h;
 }
 
 .exit-intent-inner .ebook {
-  height: 207px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  height: 160px;
   position: relative;
 }
 
@@ -174,11 +186,12 @@ input[type='checkbox']:focus + .checkbox__check {
 .exit-intent-inner .ebook img {
   width: 100%;
   height: 100%;
+  border-radius: 16px 16px 0 0;
 }
 
 .exit-intent-inner .content {
   flex: 1;
-  padding: 24px 0 32px;
+  padding: 24px 0 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -186,16 +199,16 @@ input[type='checkbox']:focus + .checkbox__check {
 }
 
 .exit-intent-inner .content .title {
-  margin-top: -50px;
+  margin-top: -40px;
   padding: 0 10px;
   text-align: center;
   z-index: 1;
-  background-color: var(--dark-850);
-  box-shadow: 0 -20px 40px var(--dark-850);
+  background-color: var(--dark);
+  box-shadow: 0 -20px 40px var(--dark);
 }
 
 .exit-intent-inner .content .description {
-  margin: 16px 0 0;
+  margin: 10px 18px 0;
   text-align: center;
 }
 
@@ -204,7 +217,7 @@ input[type='checkbox']:focus + .checkbox__check {
 }
 
 .exit-intent-inner .content .lead-form .form-group {
-  margin-top: 16px;
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -243,7 +256,7 @@ input[type='checkbox']:focus + .checkbox__check {
 .checkbox {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   margin: 8px 0 0;
 }
 
@@ -302,18 +315,20 @@ input[type='checkbox']:focus + .checkbox__check {
 
 @media (min-width: 390px) {
   .exit-intent-inner .ebook {
-    height: 230px;
+    height: 195px;
   }
 
   .main-button--submit {
+    padding: 12px;
     display: block;
-    margin-bottom: 20px;
+    margin: 24px 0;
     font-size: 1rem;
     line-height: 150%;
   }
 
   .exit-intent-inner .content .lead-form .form-group input[type='email'] {
     width: 100%;
+    margin-top: 12px;
   }
 
   .main-button--arrow {
@@ -325,18 +340,33 @@ input[type='checkbox']:focus + .checkbox__check {
   }
 
   .exit-intent-inner .content {
-    padding: 24px 16px;
+    padding: 0 16px 24px;
+  }
+
+  .exit-intent-inner .content .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 0 16px;
+    margin-top: -20px;
+  }
+
+  .exit-intent-inner .content .description {
+    margin-top: 0;
+  }
+
+  .close-button__text {
+    margin-bottom: 48px;
   }
 }
 
 @media (min-width: 768px) {
   .exit-intent-inner {
     width: 480px;
-    max-height: 1000px;
   }
 
   .exit-intent-inner .ebook {
-    height: 320px;
+    height: 310px;
   }
 
   .exit-intent-inner .content {
@@ -344,25 +374,38 @@ input[type='checkbox']:focus + .checkbox__check {
   }
 
   .exit-intent-inner .content .title {
-    margin-top: -100px;
+    margin-top: -120px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
     font-size: 1.25rem;
+    background-color: transparent;
+    box-shadow: none;
   }
 
   .exit-intent-inner .content .description {
     font-size: 1rem;
     margin-top: 0;
+    box-shadow: 0 -20px 40px var(--dark);
   }
 
   .main-button {
     font-size: 1rem;
   }
 
+  .main-button--submit {
+    margin: 9px 0 11px;
+  }
+
+  .close-button__text {
+    margin-bottom: 40px;
+  }
+
   .checkbox {
     justify-content: flex-start;
   }
 
-  .close-button__text {
-    font-size: 1rem;
+  .exit-intent-inner .content .lead-form .form-group input[type='email'] {
+    padding: 14px;
   }
 }
 
@@ -388,6 +431,7 @@ input[type='checkbox']:focus + .checkbox__check {
     min-height: 504px;
     min-width: 840px;
     border-radius: 16px;
+    background: var(--dark-600);
   }
 
   .exit-intent-inner .ebook {
@@ -406,30 +450,28 @@ input[type='checkbox']:focus + .checkbox__check {
   }
 
   .exit-intent-inner .content {
-    /* max-width: 458px; */
-    /* margin: unset; */
-    padding: 72px 56px 48px 66px;
+    padding: 72px 56px 15px 66px;
     align-items: flex-start;
   }
 
   .exit-intent-inner .content .title {
-    /* max-width: 404px; */
     margin: 0 60px 16px 0;
     padding: 0;
     text-align: left;
+    font-size: 1.5rem;
   }
 
   .exit-intent-inner .content .description {
-    /* max-width: 404px; */
-    /* margin-top: 16px; */
     text-align: left;
     font-size: 1.125rem;
+    margin: 0;
+    box-shadow: none;
   }
 
   .exit-intent-inner .content .lead-form .form-group {
-    /* width: 404px; */
     display: flex;
     flex-direction: column;
+    margin-top: 16px;
   }
 
   .exit-intent-inner .content .lead-form .form-group button {
@@ -455,12 +497,17 @@ input[type='checkbox']:focus + .checkbox__check {
   }
 
   .main-button--submit {
-    margin: 0;
+    margin: 6px 0 16px;
     padding: 12px 0;
   }
 
   .close-button {
     display: none;
+  }
+
+  .close-button--forever {
+    display: block;
+    margin: 0 auto;
   }
 
   .exit-intent-inner .content .lead-form {
